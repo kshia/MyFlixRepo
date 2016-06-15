@@ -30,6 +30,7 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
+* [X] Use a custom launcher icon for the app
 
 ## Video Walkthrough 
 
