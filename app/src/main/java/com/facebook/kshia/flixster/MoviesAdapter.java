@@ -14,6 +14,8 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
+import jp.wasabeef.picasso.transformations.RoundedCornersTransformation;
+
 /**
  * Created by kshia on 6/15/16.
  */
@@ -70,7 +72,7 @@ public class MoviesAdapter extends ArrayAdapter<Movie> {
         viewHolder.tvOverview.setText(movie.getOverview());
 
 
-        Picasso.with(getContext()).load(imageUri).placeholder(R.drawable.movie_icon).into(viewHolder.ivPoster);
+        Picasso.with(getContext()).load(imageUri).placeholder(R.drawable.movie_icon).transform(new RoundedCornersTransformation(20, 20)).into(viewHolder.ivPoster);
 
         Log.d("MoviesAdapter", "Position: " + position);
 
