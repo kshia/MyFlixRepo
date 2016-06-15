@@ -15,8 +15,8 @@ The following **required** functionality is completed:
 The following **optional** features are implemented:
 
 * [X] Views should be responsive for both landscape/portrait mode and fully optimized for performance with the ViewHolder pattern.
-* [ ] User can pull-to-refresh the popular stream with SwipeRefreshLayout.
-* [ ] Displays a nice default placeholder graphic for each image during loading (read more about Picasso).
+* [X] User can pull-to-refresh the popular stream with SwipeRefreshLayout.
+* [X] Displays a nice default placeholder graphic for each image during loading (read more about Picasso).
 * [ ] Improve the user interface through styling and coloring (1 to 5 points depending on the difficulty of UI improvements).
 * [ ] For popular movies (i.e. a movie voted for more than 5 stars), the full backdrop image is displayed. Otherwise, a poster image, the movie title, and overview is listed. Use Heterogenous ListViews and use different ViewHolder layout files for popular movies and less popular ones. (2 points)
 

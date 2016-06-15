@@ -69,7 +69,8 @@ public class MoviesAdapter extends ArrayAdapter<Movie> {
         viewHolder.tvTitle.setText(movie.getTitle());
         viewHolder.tvOverview.setText(movie.getOverview());
 
-        Picasso.with(getContext()).load(imageUri).into(viewHolder.ivPoster);
+
+        Picasso.with(getContext()).load(imageUri).placeholder(R.drawable.movie_icon).into(viewHolder.ivPoster);
 
         Log.d("MoviesAdapter", "Position: " + position);
 
