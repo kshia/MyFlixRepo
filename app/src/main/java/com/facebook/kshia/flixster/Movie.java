@@ -1,16 +1,58 @@
 package com.facebook.kshia.flixster;
 
+import android.widget.ArrayAdapter;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
  * Created by kshia on 6/15/16.
  */
 public class Movie {
-    public String title;
-    public String posterUrl;
-    public int rating;
 
-    public Movie(String title, String posterUrl, int rating) {
+    private String title;
+    private String posterUrl;
+    private String overview;
+
+    public Movie(JSONObject jsonObject) throws JSONException {
+        posterUrl = jsonObject.getString("poster_path");
+        title = jsonObject.getString("original_title");
+        overview = jsonObject.getString("overview");
+
+    }
+
+    public static ArrayList<Movie> fromJSONArray(JSONArray array) {
+        ArrayList<Movie> results = new ArrayList<>();
+
+        for (int i = 0; i < array.length(); i++) {
+            try {
+                results.add(new Movie(array.getJSONObject(i)));
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
+        }
+
+        return results;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getPosterUrl() {
+        return String.format("https://image.tmdb.org/t/p/w342%s", posterUrl);
+    }
+
+    public String getOverview() {
+        return overview;
+    }
+
+/*    public Movie(String title, String posterUrl, int rating) {
         this.title = title;
         this.posterUrl = posterUrl;
         this.rating = rating;
@@ -31,5 +73,5 @@ public class Movie {
     @Override
     public String toString() {
         return title + " - " + rating;
-    }
+    }*/
 }

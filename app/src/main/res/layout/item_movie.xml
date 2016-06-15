@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <ImageView
@@ -15,6 +15,18 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Large Text"
         android:id="@+id/tvTitle"
-        android:textSize="26sp"
-        android:padding="10dp" />
-</LinearLayout>
+        android:textSize="15sp"
+        android:padding="5dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/ivPoster"
+        android:layout_toEndOf="@+id/ivPoster" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/tvOverview"
+        android:layout_below="@+id/tvTitle"
+        android:layout_toRightOf="@+id/ivPoster"
+        android:layout_toEndOf="@+id/ivPoster" />
+</RelativeLayout>
