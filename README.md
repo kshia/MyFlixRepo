@@ -19,7 +19,7 @@ The following **optional** features are implemented:
 * [X] Displays a nice default placeholder graphic for each image during loading (read more about Picasso).
 * [X] Expose details of movie (ratings using RatingBar, popularity, and synopsis) in a separate activity. (3 points)
 * [ ] Improve the user interface through styling and coloring (1 to 5 points depending on the difficulty of UI improvements).
-* [ ] Stretch: For popular movies (i.e. a movie voted for more than 5 stars), the full backdrop image is displayed. Otherwise, a poster image, the movie title, and overview is listed. Use Heterogenous ListViews and use different ViewHolder layout files for popular movies and less popular ones. (2 points)
+* [X] Stretch: For popular movies (i.e. a movie voted for more than 5 stars), the full backdrop image is displayed. Otherwise, a poster image, the movie title, and overview is listed. Use Heterogenous ListViews and use different ViewHolder layout files for popular movies and less popular ones. (2 points)
 * [X] Stretch: Add a rounded corners for the images using the Picasso transformations. (1 point)
 * [ ] Stretch: Apply the popular ButterKnife annotation library to reduce view boilerplate. (1 point)
 * [ ] Stretch: Allow video posts to be played in full-screen using the YouTubePlayerView (2 points)
@@ -32,8 +32,11 @@ The following **additional** features are implemented:
 
 * Use a custom launcher icon for the app
 * Overview truncates with ellipsis so each element in the list is the same size, regardless of length of overview
-* Display decimal rating value next to RatingBar
-* Scrollable overview in DetailsActivity
+* Display decimal rating value next to RatingBar scaled out of 5
+* Round popularity to 2 decimal places
+* Scrollable synopsis in DetailsActivity
+* Created landscape view for DetailsActivity using nested layouts and weights
+* Backdrop image displayed in list only if orientation is portrait and backdrop exists, otherwise shows poster image with title and overview
 
 ## Video Walkthrough 
 
@@ -45,7 +48,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+I had trouble with combining the ViewHolder pattern and the Heterogenous ListViews. 
 
 ## License
 

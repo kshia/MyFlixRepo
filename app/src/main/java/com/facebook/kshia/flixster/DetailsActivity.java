@@ -18,8 +18,6 @@ public class DetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
 
-
-
         String title = getIntent().getStringExtra("title");
         Double rating = getIntent().getDoubleExtra("rating", 0);
         String backdropUrl = getIntent().getStringExtra("backdrop");

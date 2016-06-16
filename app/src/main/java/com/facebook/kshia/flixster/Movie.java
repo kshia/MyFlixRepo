@@ -1,5 +1,6 @@
 package com.facebook.kshia.flixster;
 
+import android.util.Log;
 import android.widget.ArrayAdapter;
 
 import org.json.JSONArray;
@@ -56,6 +57,13 @@ public class Movie {
     }
 
     public String getBackdropUrl() {
+        Log.d("BackdropUrl", "" + backdropUrl);
+
+        if (backdropUrl.equals("null")) {
+            Log.d("BackdropUrl", "null detected");
+            return null;
+        }
+
         return String.format("https://image.tmdb.org/t/p/w342%s", backdropUrl);
     }
 
