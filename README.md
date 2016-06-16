@@ -17,21 +17,23 @@ The following **optional** features are implemented:
 * [X] Views should be responsive for both landscape/portrait mode and fully optimized for performance with the ViewHolder pattern.
 * [X] User can pull-to-refresh the popular stream with SwipeRefreshLayout.
 * [X] Displays a nice default placeholder graphic for each image during loading (read more about Picasso).
+* [X] Expose details of movie (ratings using RatingBar, popularity, and synopsis) in a separate activity. (3 points)
 * [ ] Improve the user interface through styling and coloring (1 to 5 points depending on the difficulty of UI improvements).
-* [ ] For popular movies (i.e. a movie voted for more than 5 stars), the full backdrop image is displayed. Otherwise, a poster image, the movie title, and overview is listed. Use Heterogenous ListViews and use different ViewHolder layout files for popular movies and less popular ones. (2 points)
-
-* [ ] Stretch: Expose details of movie (ratings using RatingBar, popularity, and synopsis) in a separate activity. (3 points)
-* [ ] Stretch: Allow video posts to be played in full-screen using the YouTubePlayerView (2 points)
-	When clicking on a popular movie (i.e. a movie voted for more than 5 stars) the video should be played 		immediately.
-	Less popular videos rely on the detailed page should show an image preview that can initiate playing a 		YouTube video.
-* [ ] Stretch: Add a play icon overlay to popular movies to indicate that the movie can be played (1 point).
-* [ ] Stretch: Apply the popular ButterKnife annotation library to reduce view boilerplate. (1 point)
+* [ ] Stretch: For popular movies (i.e. a movie voted for more than 5 stars), the full backdrop image is displayed. Otherwise, a poster image, the movie title, and overview is listed. Use Heterogenous ListViews and use different ViewHolder layout files for popular movies and less popular ones. (2 points)
 * [X] Stretch: Add a rounded corners for the images using the Picasso transformations. (1 point)
+* [ ] Stretch: Apply the popular ButterKnife annotation library to reduce view boilerplate. (1 point)
+* [ ] Stretch: Allow video posts to be played in full-screen using the YouTubePlayerView (2 points)
+  * When clicking on a popular movie (i.e. a movie voted for more than 5 stars) the video should be played 		immediately.
+  * Less popular videos rely on the detailed page should show an image preview that can initiate playing a 		YouTube video.
+  * Add a play icon overlay to popular movies to indicate that the movie can be played (1 point).
+
 
 The following **additional** features are implemented:
 
-* [X] Use a custom launcher icon for the app
-* [X] Overview truncates so each element in the list is the same size, regardless of length of overview
+* Use a custom launcher icon for the app
+* Overview truncates with ellipsis so each element in the list is the same size, regardless of length of overview
+* Display decimal rating value next to RatingBar
+* Scrollable overview in DetailsActivity
 
 ## Video Walkthrough 
 

@@ -1,9 +1,12 @@
 package com.facebook.kshia.flixster;
 
+import android.content.Intent;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -65,6 +68,18 @@ public class MoviesActivity extends AppCompatActivity {
         // 4. Associate the adapter with the ListView
         if (lvMovies != null) {
             lvMovies.setAdapter(adapter);
+            lvMovies.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    Intent i = new Intent(MoviesActivity.this, DetailsActivity.class);
+                    i.putExtra("title", movies.get(position).getTitle());
+                    i.putExtra("rating", movies.get(position).getRating());
+                    i.putExtra("backdrop", movies.get(position).getBackdropUrl());
+                    i.putExtra("synopsis", movies.get(position).getOverview());
+                    i.putExtra("popularity", movies.get(position).getPopularity());
+                    startActivity(i);
+                }
+            });
         }
 
         client = new AsyncHttpClient();

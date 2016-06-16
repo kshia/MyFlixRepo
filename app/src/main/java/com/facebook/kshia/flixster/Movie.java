@@ -18,12 +18,17 @@ public class Movie {
     private String posterUrl;
     private String backdropUrl;
     private String overview;
+    private double popularity;
+    private double rating;
 
     public Movie(JSONObject jsonObject) throws JSONException {
         posterUrl = jsonObject.getString("poster_path");
         title = jsonObject.getString("original_title");
         overview = jsonObject.getString("overview");
         backdropUrl = jsonObject.getString("backdrop_path");
+        popularity = jsonObject.getDouble("popularity");
+        rating = jsonObject.getDouble("vote_average");
+
 
     }
 
@@ -58,7 +63,15 @@ public class Movie {
         return overview;
     }
 
-/*    public Movie(String title, String posterUrl, int rating) {
+    public double getPopularity() {
+        return popularity;
+    }
+
+    public double getRating() {
+        return rating;
+    }
+
+    /*    public Movie(String title, String posterUrl, int rating) {
         this.title = title;
         this.posterUrl = posterUrl;
         this.rating = rating;
