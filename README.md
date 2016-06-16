@@ -31,6 +31,7 @@ The following **optional** features are implemented:
 The following **additional** features are implemented:
 
 * [X] Use a custom launcher icon for the app
+* [X] Overview truncates so each element in the list is the same size, regardless of length of overview
 
 ## Video Walkthrough 
 
