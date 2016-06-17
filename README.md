@@ -1,35 +1,34 @@
-# Assignment 2 - *Flixster*
+# Project 2 - *Flixster*
 
-**Flixster** a read-only movie listing app using the Movie Database API
+**Flixster** shows the latest movies currently playing in theaters. The app utilizes the Movie Database API to display images and basic information about these movies to the user.
 
-Submitted by: **Kristina Shia**
-
-Time spent: **4** hours spent in total
+Time spent: **12** hours spent in total
 
 ## User Stories
 
 The following **required** functionality is completed:
 
-* [X] User can view a list of movies (title, poster image, and overview) currently playing in theaters from the Movie Database API.
+* [X] User can **scroll through current movies** from the Movie Database API
 
 The following **optional** features are implemented:
 
-* [X] Views should be responsive for both landscape/portrait mode and fully optimized for performance with the ViewHolder pattern.
-* [X] User can pull-to-refresh the popular stream with SwipeRefreshLayout.
-* [X] Displays a nice default placeholder graphic for each image during loading (read more about Picasso).
-* [X] Expose details of movie (ratings using RatingBar, popularity, and synopsis) in a separate activity. (3 points)
-* [ ] Improve the user interface through styling and coloring (1 to 5 points depending on the difficulty of UI improvements).
-* [X] Stretch: For popular movies (i.e. a movie voted for more than 5 stars), the full backdrop image is displayed. Otherwise, a poster image, the movie title, and overview is listed. Use Heterogenous ListViews and use different ViewHolder layout files for popular movies and less popular ones. (2 points)
-* [X] Stretch: Add a rounded corners for the images using the Picasso transformations. (1 point)
-* [ ] Stretch: Apply the popular ButterKnife annotation library to reduce view boilerplate. (1 point)
-* [ ] Stretch: Allow video posts to be played in full-screen using the YouTubePlayerView (2 points)
-  * When clicking on a popular movie (i.e. a movie voted for more than 5 stars) the video should be played 		immediately.
-  * Less popular videos rely on the detailed page should show an image preview that can initiate playing a 		YouTube video.
-  * Add a play icon overlay to popular movies to indicate that the movie can be played (1 point).
-
+* [X] For each movie displayed, user can see the following details:
+  * [X] Title, Poster Image, Overview (Portrait mode)
+  * [X] Title, Backdrop Image, Overview (Landscape mode)
+* [X] Layout is optimized with the [ViewHolder](http://guides.codepath.com/android/Using-an-ArrayAdapter-with-ListView#improving-performance-with-the-viewholder-pattern) pattern.
+* [X] Display a nice default [placeholder graphic](http://guides.codepath.com/android/Displaying-Images-with-the-Picasso-Library#configuring-picasso) for each image during loading.
+* [X] Allow user to view details of the movie including ratings and popularity within a separate activity or dialog fragment.
+* [X] Improved the user interface by experimenting with styling and coloring.
+* [X] Apply rounded corners for the poster or background images using [Picasso transformations](https://guides.codepath.com/android/Displaying-Images-with-the-Picasso-Library#other-transformations)
+* [ ] Apply the popular [Butterknife annotation library](http://guides.codepath.com/android/Reducing-View-Boilerplate-with-Butterknife) to reduce boilerplate code.
+* [X] Allow video trailers to be played in full-screen using the YouTubePlayerView from the details screen.
 
 The following **additional** features are implemented:
 
+* User can pull-to-refresh the popular stream with SwipeRefreshLayout.
+* When clicking on a popular movie (i.e. a movie voted for more than 5 stars) the video is played 		immediately.
+* Less popular videos rely on the detailed page should show an image preview that can initiate playing a 		YouTube video.
+* Add a play icon overlay to popular movies to indicate that the movie can be played (1 point).
 * Use a custom launcher icon for the app
 * Overview truncates with ellipsis so each element in the list is the same size, regardless of length of overview
 * Display decimal rating value next to RatingBar scaled out of 5
@@ -38,7 +37,7 @@ The following **additional** features are implemented:
 * Created landscape view for DetailsActivity using nested layouts and weights
 * Backdrop image displayed in list only if orientation is portrait and backdrop exists, otherwise shows poster image with title and overview
 
-## Video Walkthrough 
+## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
@@ -48,7 +47,12 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-I had trouble with combining the ViewHolder pattern and the Heterogenous ListViews. 
+I had trouble with combining the ViewHolder pattern and the Heterogenous ListViews. Making the emulator work with Youtube was also difficult.
+
+## Open-source libraries used
+
+- [Android Async HTTP](https://github.com/loopj/android-async-http) - Simple asynchronous HTTP requests with JSON parsing
+- [Picasso](http://square.github.io/picasso/) - Image loading and caching library for Android
 
 ## License
 

@@ -7,6 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/background"
     tools:context="com.facebook.kshia.flixster.DetailsActivity">
 
     <LinearLayout
@@ -61,12 +62,13 @@
         </RelativeLayout>
 
 
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:adjustViewBounds="true"
+        <com.google.android.youtube.player.YouTubePlayerView
+            android:id="@+id/player"
             android:layout_weight="1"
-            android:id="@+id/ivBackdrop" />
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+
 
 
     </LinearLayout>

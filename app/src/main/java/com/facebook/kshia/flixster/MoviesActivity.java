@@ -10,6 +10,10 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.google.android.youtube.player.YouTubeBaseActivity;
+import com.google.android.youtube.player.YouTubeInitializationResult;
+import com.google.android.youtube.player.YouTubePlayer;
+import com.google.android.youtube.player.YouTubePlayerView;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
 
@@ -68,7 +72,7 @@ public class MoviesActivity extends AppCompatActivity {
         // 4. Associate the adapter with the ListView
         if (lvMovies != null) {
             lvMovies.setAdapter(adapter);
-            lvMovies.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        /*    lvMovies.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                     Intent i = new Intent(MoviesActivity.this, DetailsActivity.class);
@@ -79,7 +83,7 @@ public class MoviesActivity extends AppCompatActivity {
                     i.putExtra("popularity", movies.get(position).getPopularity());
                     startActivity(i);
                 }
-            });
+            });*/
         }
 
         client = new AsyncHttpClient();
