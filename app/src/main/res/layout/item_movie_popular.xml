@@ -18,7 +18,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_centerInParent="true"
-        android:src="@drawable/playwhite"
+        android:src="@drawable/playpurple"
         android:id="@+id/play_button"
         android:layout_gravity="center" />
 

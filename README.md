@@ -36,6 +36,7 @@ The following **additional** features are implemented:
 * Scrollable synopsis in DetailsActivity
 * Created landscape view for DetailsActivity using nested layouts and weights
 * Backdrop image displayed in list only if orientation is portrait and backdrop exists, otherwise shows poster image with title and overview
+* Used purple play button in desperate attempt to make app less ugly
 
 ## Video Walkthrough
 
