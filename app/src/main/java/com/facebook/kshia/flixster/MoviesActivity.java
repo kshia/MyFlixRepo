@@ -72,18 +72,6 @@ public class MoviesActivity extends AppCompatActivity {
         // 4. Associate the adapter with the ListView
         if (lvMovies != null) {
             lvMovies.setAdapter(adapter);
-        /*    lvMovies.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                @Override
-                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    Intent i = new Intent(MoviesActivity.this, DetailsActivity.class);
-                    i.putExtra("title", movies.get(position).getTitle());
-                    i.putExtra("rating", movies.get(position).getRating());
-                    i.putExtra("backdrop", movies.get(position).getBackdropUrl());
-                    i.putExtra("synopsis", movies.get(position).getOverview());
-                    i.putExtra("popularity", movies.get(position).getPopularity());
-                    startActivity(i);
-                }
-            });*/
         }
 
         client = new AsyncHttpClient();

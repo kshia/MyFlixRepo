@@ -61,7 +61,6 @@ public class DetailsActivity extends YouTubeBaseActivity {
                     });
         }
 
-
         tvTitle.setText(title);
         rbRatingBar.setIsIndicator(true);
         rbRatingBar.setStepSize(0.5f);
